@@ -5,10 +5,29 @@ import Table from './Table'
 
 class App extends Component{
   render(){
-    return(
-      <div className="App">
-      <Table />
+    //with render
+    const characters = [
+      {
+        name : 'Charlie',
+        job: 'Bouncer',
+      },
+      {
+        name: 'Zukile',
+        job: 'Accountant',
+      },
+      {
+        name: 'Dee',
+        job: 'actor',
+      },
 
+      {
+        name: 'Pearl',
+        job: 'Mayor'
+      }
+    ]
+    return(
+      <div className="container">
+      <Table characterData={characters}/>
       </div>
     )
   }
