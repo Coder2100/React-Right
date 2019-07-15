@@ -21,12 +21,12 @@ class App extends Component{
   }
 
   handleSubmit = character => {
-    this.setState({characters: [...this.state.characters, character]})
+    this.setState({characters: [...this.state.characters, character]});
   }
   render(){
     //const {characters} = this.state
       //with render
- 
+ /**
     const characters = [
       {
         name : 'Charlie',
@@ -47,16 +47,22 @@ class App extends Component{
       }
     ]
     
-    
+     */
 
 
-    //const {characters} = this.state
+    const {characters} = this.state
     return(
       <div className="container">
-      <Table characterData={characters} removeCharacter={this.removeCharacter}/>
+      <h1>Employee List</h1>
+      <p>Add employee Name and Job Title</p>
+      <Table 
+      characterData={characters} 
+      removeCharacter={this.removeCharacter}
+      />
+      <h1>Add New:</h1>
       <Form handleSubmit={this.handleSubmit}/>
       </div>
-    )
+    );
   }
 }
-export default App
+export default App;
